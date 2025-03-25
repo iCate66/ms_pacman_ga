@@ -1,9 +1,9 @@
 # System-specific parameters
 
-NUM_PROCESSES = 6  # Leave 2 cores for system and overhead on my 8 core system; select 'None' for automatic selection based on system running
+NUM_PROCESSES = 6  
 GENERATIONS = 1000
 POPULATION_SIZE = 100  
 SEQUENCE_LENGTH = 300  
-MUTATION_RATE = 0.05  # Slightly increased from 0.05 for better exploration
-CROSSOVER_RATE = 0.7 # originally 0.7
+MUTATION_RATE = 0.05  
+CROSSOVER_RATE = 0.7 
 TOURNAMENT_SIZE = 3
