@@ -1,0 +1,83 @@
+[NEAT]
+fitness_criterion     = max
+fitness_threshold     = 10000
+pop_size             = 500
+reset_on_extinction  = True
+
+[DefaultGenome]
+num_inputs           = 40
+num_outputs          = 4
+num_hidden           = 4
+feed_forward         = True
+
+recurrent = True
+
+# More diverse initial population # Initial network topology 
+initial_connection    = partial_nodirect 0.25
+
+# Connection enable/disable
+enabled_default      = True
+enabled_mutate_rate  = 0.05
+
+# Species differentiation
+compatibility_disjoint_coefficient = 0.8
+compatibility_weight_coefficient   = 0.4
+
+# Higher mutation rates # Connection add/remove rates
+conn_add_prob         = 0.9
+conn_delete_prob      = 0.4
+# Node add/remove rates
+node_add_prob         = 0.9
+node_delete_prob      = 0.2
+
+# Bias mutation # Adjusted for spatial reasoning
+bias_init_mean = 0.0
+bias_init_stdev = 1.0
+bias_replace_rate = 0.1
+bias_mutate_rate = 0.7
+bias_mutate_power = 0.5
+bias_max_value = 30.0
+bias_min_value = -30.0
+
+# Node response
+response_init_mean = 1.0
+response_init_stdev = 0.0
+response_replace_rate = 0.0
+response_mutate_rate = 0.0
+response_mutate_power = 0.0
+response_max_value = 30.0
+response_min_value = -30.0
+
+# Weight mutation
+weight_init_mean      = 0.0
+weight_init_stdev     = 1.0
+weight_mutate_rate    = 0.8
+weight_mutate_power   = 0.9
+weight_replace_rate   = 0.15
+weight_max_value      = 50.0
+weight_min_value      = -50.0
+
+# Activation functions
+activation_default      = random
+activation_mutate_rate = 0.5
+activation_options     = relu tanh sigmoid gauss sin clamped
+aggregation_mutate_rate = 0.5
+aggregation_default = sum
+aggregation_options = sum max
+
+[DefaultSpeciesSet]
+# Lower threshold creates more species
+compatibility_threshold = 0.8
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation      = 25
+species_elitism     = 4
+
+[DefaultReproduction]
+elitism            = 5
+survival_threshold = 0.4
+min_species_size = 3
+
+
+
