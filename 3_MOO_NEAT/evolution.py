@@ -509,20 +509,24 @@ def save_checkpoint_with_islands(gen, islands, config, generation_history,
     # Get best genomes by objective from all islands
     best_genomes_by_objective = {}
     try:
-        with open('best_genomes_by_objective.txt', 'r') as f:
-            for line in f:
-                parts = line.strip().split(': ', 1)
-                if len(parts) == 2:
-                    objective = parts[0]
-                    data_str = parts[1]
-                    
-                    # Parse values from data string
-                    data = {}
-                    for item in data_str.split(', '):
-                        key, value = item.split('=', 1)
-                        data[key] = value
-                    
-                    best_genomes_by_objective[objective] = data
+        # Check if the file exists first
+        if os.path.exists('best_genomes_by_objective.txt'):
+            with open('best_genomes_by_objective.txt', 'r') as f:
+                for line in f:
+                    parts = line.strip().split(': ', 1)
+                    if len(parts) == 2:
+                        objective = parts[0]
+                        data_str = parts[1]
+                        
+                        # Parse values from data string
+                        data = {}
+                        for item in data_str.split(', '):
+                            key, value = item.split('=', 1)
+                            data[key] = value
+                        
+                        best_genomes_by_objective[objective] = data
+        else:
+            logger.info("No best_genomes_by_objective.txt file exists yet. Creating a new checkpoint without it.")
     except Exception as e:
         logger.error(f"Error reading best genomes file: {e}")
     
@@ -539,13 +543,26 @@ def save_checkpoint_with_islands(gen, islands, config, generation_history,
         'best_ever': best_ever
     }
     
-    filename = f'neat_checkpoint_gen_{gen}.pkl'
+    # Create checkpoint directory if it does not exist
+    checkpoint_dir = 'checkpoints'
+    if not os.path.exists(checkpoint_dir):
+        os.makedirs(checkpoint_dir)
+    
+    filename = f'{checkpoint_dir}/neat_checkpoint_gen_{gen}.pkl'
     try:
         with open(filename, 'wb') as f:
             pickle.dump(checkpoint, f)
         logger.info(f"Saved checkpoint at generation {gen}")
     except Exception as e:
         logger.error(f"Failed to save checkpoint: {e}")
+        # Try alternative location
+        try:
+            backup_filename = f'neat_checkpoint_gen_{gen}.pkl'
+            with open(backup_filename, 'wb') as f:
+                pickle.dump(checkpoint, f)
+            logger.info(f"Saved checkpoint to alternate location: {backup_filename}")
+        except Exception as e2:
+            logger.error(f"Failed to save backup checkpoint: {e2}")
 
 # Save final results pkl for analysis
 def save_final_results(results, filename='neat_final_results.pkl'):
