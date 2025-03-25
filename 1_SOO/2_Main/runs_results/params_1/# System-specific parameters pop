@@ -1,6 +1,6 @@
 # System-specific parameters
 
-NUM_PROCESSES = 6  # Leave 2 cores for system and overhead on my 8 core system; select 'None' for automatic selection based on system running
+NUM_PROCESSES = 6  
 GENERATIONS = 1000
 POPULATION_SIZE = 50  ***
 SEQUENCE_LENGTH = 300  
