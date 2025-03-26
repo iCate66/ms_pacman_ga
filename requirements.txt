@@ -1,0 +1,8 @@
+#  Learning environment
+gymnasium==1.0.0
+ale-py==0.10.2
+ocatari==2.1.0
+
+# Evolutionary computing libraries
+deap==1.4.2
+neat-python==0.92
