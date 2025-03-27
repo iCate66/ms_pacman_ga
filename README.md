@@ -83,23 +83,23 @@ Key files: <br/><br/>
 **Stage 1: Single-objective genetic algorithm**
 
 Code
-> python genetic_algorithm_multiprocessing_SOO.py
+> python genetic_algorithm_multiprocessing_SOO.py <br>
 
 **Stage 2: Multi-objective, NSGA-II vs SPEA2**
 Run NSGA-II:
 
 Code
-> python MOO_NSGA2.py
+> python MOO_NSGA2.py <br>
 
 Run SPEA2:
 
 Code:
-> python MOO_SPEA2.py
+> python MOO_SPEA2.py <br>
 
 **Stage 3: NEAT +NSGA-II**
 
 Code:
-> python main.py
+> python main.py <br>
 
 ## Acknowledgements
 
