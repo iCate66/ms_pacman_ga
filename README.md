@@ -68,11 +68,45 @@ Key files: <br/><br/>
 - [game_utils.py](3_MOO_NEAT/game_utils.py) - neural network vector input construction, object extraction from environment, game state processing utilities
 - [test_variables.py](3_MOO_NEAT/test_variables.py) - test suite to verify required variables, imports, functions, dependencies are properly defined
 - [run_tests.py](3_MOO_NEAT/run_tests.py) - implement above as unit testing module
-- [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br> NEAT_and_NSGA-II_Analysis.ipynb
+- [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br>
   - [NEAT_and_NSGA-II_Analysis.ipynb](3_MOO_NEAT/results/NEAT_and_NSGA-II_Analysis.ipynb)
   - results pickle from running simulation main.py
 
+### Running the code
 
+# Configuration
+- Check configuration for your system and adapt the code for optimal number of core CPUs for NUM_PROCESSES in each .py simulation file as defined below
+- Adjust parameters in .py simulation files (config.py for stage 3) to modify evolutionary process
+- Modify neat_config.txt to change NEAT-specific parameters
+- Objectives can be modified in objectives functions in .py simulation files (objectives.py for stage 3)
+
+**Stage 1: Single-objective genetic algorithm**
+
+Code
+> python genetic_algorithm_multiprocessing_SOO.py
+
+**Stage 2: Multi-objective, NSGA-II vs SPEA2**
+Run NSGA-II:
+
+Code
+> python MOO_NSGA2.py
+
+Run SPEA2:
+
+Code:
+> python MOO_SPEA2.py
+
+**Stage 3: NEAT +NSGA-II**
+
+Code:
+> python main.py
+
+## Acknowledgements
+
+- OpenAI Gymnasium and ALE-py for Ms. Pac-Man environment
+- OCAtari for wrapper on Gymnasium environment to extract objects from Atari games
+- DEAP library for evolutionary algorithm implementations
+- NEAT-Python library for neuroevolution
 
 
 
