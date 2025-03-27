@@ -85,17 +85,21 @@ Key files: <br/><br/>
 Code
 > python genetic_algorithm_multiprocessing_SOO.py 
 <br><br>
+
 **Stage 2: Multi-objective, NSGA-II vs SPEA2**
+
 Run NSGA-II:
 
 Code
 > python MOO_NSGA2.py 
 <br><br>
+
 Run SPEA2:
 
 Code:
 > python MOO_SPEA2.py
-> <br><br>
+<br><br>
+
 **Stage 3: NEAT +NSGA-II**
 
 Code:
