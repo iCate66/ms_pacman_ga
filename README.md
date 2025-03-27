@@ -60,7 +60,14 @@ Key files: <br/><br/>
 [3_MOO_NEAT](3_MOO_NEAT) folder containing: <br>
 - [config.py](3_MOO_NEAT/config.py) - configuration parameters
 - [neat_config.txt](3_MOO_NEAT/neat_config.txt) - NEAT configuration
-- 
+- [main.py](3_MOO_NEAT/main.py) - entry point **(run this file)**
+- [classes.py](3_MOO_NEAT/classes.py) - data structures and metrics
+- [evolution.py](3_MOO_NEAT/evolution.py) - core evolutionary algorithms
+- [objectives.py](3_MOO_NEAT/objectives.py) - multi-objective fitness functions
+- [evaluation.py](3_MOO_NEAT/evaluation.py) - agent evaluation logic
+- [game_utils.py](3_MOO_NEAT/game_utils.py) - neural network vector input construction, object extraction from environment, game state processing utilities
+- [test_variables.py](3_MOO_NEAT/test_variables.py) - test suite to verify required variables, imports, functions, dependencies are properly defined
+- [run_tests.py](3_MOO_NEAT/run_tests.py) - implement above as unit testing module
 - [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br>
   - 
 
