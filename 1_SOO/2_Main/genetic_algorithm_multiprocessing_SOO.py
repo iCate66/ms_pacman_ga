@@ -17,8 +17,8 @@ logging.basicConfig(level=logging.INFO,
 logger = logging.getLogger(__name__)
 
 # System-specific parameters
-NUM_PROCESSES = 6  # Leave 2 cores for system and overhead on an 8 core system; select 'None' for automatic selection based on system running
-GENERATIONS = 1000
+NUM_PROCESSES = 6  # Select number of cores depending on system and overhead; select 'None' for automatic selection based on system running
+GENERATIONS = 1000 # Select number of generations to run
 POPULATION_SIZE = 200  # baseline 100; testing resource scaling
 SEQUENCE_LENGTH = 2000  # baseline 300; testing longer action sequences (or less to save memory)
 MUTATION_RATE = 0.1  # baseline 0.05; for better exploration
@@ -26,7 +26,7 @@ CROSSOVER_RATE = 0.9 # baseline 0.7; testing more genetic mixing
 TOURNAMENT_SIZE = 5 # baseline 3; Selection Pressure Test: Testing higher pressure
 
 # Consistent action space
-LIMITED_ACTIONS = [1, 2, 3, 4]  # NOOP, UP, RIGHT, LEFT, DOWN
+LIMITED_ACTIONS = [1, 2, 3, 4]  # UP, RIGHT, LEFT, DOWN
 
 def create_env():
     """Create a Ms. Pac-Man environment"""
@@ -55,7 +55,7 @@ def evaluate_individual(individual, generation, seed=None):
         
         max_steps = 5000
         no_reward_counter = 0
-        max_no_reward_steps = 1000 # score of at least a pellet 
+        max_no_reward_steps = 1000 
         last_total_reward = 0
         
         try:
