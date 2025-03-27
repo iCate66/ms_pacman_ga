@@ -14,18 +14,35 @@ This project implements and compares different evolutionary computing approaches
    - Fitness is directly measured by game score
    - Implements crossover, mutation and tournament selection
 
-   Key files: <br/><br/> 
-   **Prototype**     
-     [1_SOO/1_Prototype/PROTOTYPE.ipynb](1_SOO/1_Prototype/PROTOTYPE.ipynb) -
+Key files: <br/><br/> 
+[Prototype](1_SOO/1_Prototype/) folder containing:  <br/>  
+
+- [PROTOTYPE.ipynb](1_SOO/1_Prototype/PROTOTYPE.ipynb) -
         Initial prototype in a self-contained Jupyter notebook <br>
-     [1_SOO/1_Prototype/best_agent_episode-7770.mp4](1_SOO/1_Prototype/best_agent_episode-7770.mp4) -
-        Video playback of best agent resulting from above notebook <br><br>
-   **Main implementation** <br/>
-     [1_SOO/2_Main/genetic_algorithm_multiprocessing_SOO.py](1_SOO/2_Main/genetic_algorithm_multiprocessing_SOO.py) - main SOO implementation featuring multiprocessing for efficiency <br>
-     [1_SOO/2_Main/run_results_from_script.ipynb](1_SOO/2_Main/run_results_from_script.ipynb) - notebook to analyse results from results pickles generated from above simulation <br>
-     [1_SOO/2_Main/compare_parameters_runs.ipynb](1_SOO/2_Main/compare_parameters_runs.ipynb) - notebook to analyse results from multiple simulation runs measuring effects of different combinations of parameters <br>
-     [1_SOO/2_Main/runs_results/](1_SOO/2_Main/runs_results/) - folder containing resulting files (pickles, videos) of simulation runs at different parameter combinations
-     
+- best_agent_episode-7770.mp4 -
+        Video playback of best agent resulting from above notebook <br>
+        
+[Main](1_SOO/2_Main/) folder containing: <br/>
+- [genetic_algorithm_multiprocessing_SOO.py](1_SOO/2_Main/genetic_algorithm_multiprocessing_SOO.py) - main SOO implementation featuring multiprocessing for efficiency <br>
+- [run_results_from_script.ipynb](1_SOO/2_Main/run_results_from_script.ipynb) - notebook to analyse results from results pickles generated from above simulation <br>
+- [compare_parameters_runs.ipynb](1_SOO/2_Main/compare_parameters_runs.ipynb) - notebook to analyse results from multiple simulation runs measuring effects of different combinations of parameters <br>
+- [runs_results/](1_SOO/2_Main/runs_results/) - folder containing resulting files (pickles, videos) of simulation runs at different parameter combinations
+
+### Stage 2: Multi-objective evolutionary algorithms
+
+  - NSGA-II and SPEA2 algorithm implementations
+  - Three objectives for Pareto-optimal strategy discovery:
+    - progression: level completion and maze exploration
+    - survival: avoiding ghosts and staying alive for as long as possible
+    - efficiency: strategic ghost hunting and power pill usage
+  - Gameplay metrics tracking and playstyle analysis for strategic classification
+
+    Key files: <br/>
+
+    [2_MOO/NSGA2](2_MOO/NSGA2) - folder containing: <br>
+    [MOO_NSGA2.py](2_MOO/NSGA2/MOO_NSGA2.py) - main implementation of NSGA-II simulation
+    
+
     
     
    
