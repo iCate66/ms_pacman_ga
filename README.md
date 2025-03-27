@@ -47,7 +47,26 @@ Key files: <br/><br/>
   - [SPEA2.py](2_MOO/SPEA2/MOO_SPEA2.py) - main implementation of SPEA2 simulation
   - 3 folders of different runs from above simulation containing pickle results files and notebook analysis <br>
 - [Compare_NSGA2_SPEA2_Analysis.ipynb](2_MOO/Compare_NSGA2_SPEA2_Analysis.ipynb) - comparison analysis of both algorithms based on results from runs from each
-    
+
+### Stage 3: Neuroevolution (NEAT + NSGA-II)
+Implements NEAT with NSGA-II to evolve neural network controllers.
+
+- Dynamic network topology evolves with agent
+- Island model with migration for improved diversity
+- Rich input representation from game state
+- Hybrid reward system and behaviour analysis
+
+Key files: <br/><br/> 
+[3_MOO_NEAT](3_MOO_NEAT) folder containing: <br>
+- [config.py](3_MOO_NEAT/config.py) - configuration parameters
+- [neat_config.txt](3_MOO_NEAT/neat_config.txt) - NEAT configuration
+- 
+- [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br>
+  - 
+
+
+
+
 
     
     
