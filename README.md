@@ -68,8 +68,9 @@ Key files: <br/><br/>
 - [game_utils.py](3_MOO_NEAT/game_utils.py) - neural network vector input construction, object extraction from environment, game state processing utilities
 - [test_variables.py](3_MOO_NEAT/test_variables.py) - test suite to verify required variables, imports, functions, dependencies are properly defined
 - [run_tests.py](3_MOO_NEAT/run_tests.py) - implement above as unit testing module
-- [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br>
-  - 
+- [3_MOO_NEAT/results](3_MOO_NEAT/results) folder containing: <br> NEAT_and_NSGA-II_Analysis.ipynb
+  - [NEAT_and_NSGA-II_Analysis.ipynb](3_MOO_NEAT/results/NEAT_and_NSGA-II_Analysis.ipynb)
+  - results pickle from running simulation main.py
 
 
 
