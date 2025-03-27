@@ -28,7 +28,8 @@ Key files: <br/><br/>
 - [compare_parameters_runs.ipynb](1_SOO/2_Main/compare_parameters_runs.ipynb) - notebook to analyse results from multiple simulation runs measuring effects of different combinations of parameters <br>
 - [runs_results/](1_SOO/2_Main/runs_results/) - folder containing resulting files (pickles, videos) of simulation runs at different parameter combinations
 
-### Stage 2: Multi-objective evolutionary algorithms
+### Stage 2: Multi-objective evolutionary algorithms 
+Extends the evolution to consider multiple objectives with both NSGA-II and SPEA2.
 
   - NSGA-II and SPEA2 algorithm implementations
   - Three objectives for Pareto-optimal strategy discovery:
@@ -37,10 +38,15 @@ Key files: <br/><br/>
     - efficiency: strategic ghost hunting and power pill usage
   - Gameplay metrics tracking and playstyle analysis for strategic classification
 
-    Key files: <br/>
-
-    [2_MOO/NSGA2](2_MOO/NSGA2) - folder containing: <br>
-    [MOO_NSGA2.py](2_MOO/NSGA2/MOO_NSGA2.py) - main implementation of NSGA-II simulation
+Key files: <br/><br/>
+[2_MOO](2_MOO) folder containing: <br>
+- [NSGA2](2_MOO/NSGA2) folder containing: <br>
+  - [NSGA2.py](2_MOO/NSGA2/MOO_NSGA2.py) - main implementation of NSGA-II simulation
+  - 3 folders of different runs from above simulation containing pickle results files and notebook analysis <br>
+- [SPEA2](2_MOO/SPEA2) folder containing: <br>
+  - [SPEA2.py](2_MOO/SPEA2/MOO_SPEA2.py) - main implementation of SPEA2 simulation
+  - 3 folders of different runs from above simulation containing pickle results files and notebook analysis <br>
+- [Compare_NSGA2_SPEA2_Analysis.ipynb](2_MOO/Compare_NSGA2_SPEA2_Analysis.ipynb) - comparison analysis of both algorithms based on results from runs from each
     
 
     
