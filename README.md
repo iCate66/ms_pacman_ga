@@ -74,7 +74,7 @@ Key files: <br/><br/>
 
 ### Running the code
 
-# Configuration
+## Configuration
 - Check configuration for your system and adapt the code for optimal number of core CPUs for NUM_PROCESSES in each .py simulation file as defined below
 - Adjust parameters in .py simulation files (config.py for stage 3) to modify evolutionary process
 - Modify neat_config.txt to change NEAT-specific parameters
@@ -83,30 +83,75 @@ Key files: <br/><br/>
 **Stage 1: Single-objective genetic algorithm**
 
 Code
-> python genetic_algorithm_multiprocessing_SOO.py <br>
-
+> python genetic_algorithm_multiprocessing_SOO.py 
+<br><br>
 **Stage 2: Multi-objective, NSGA-II vs SPEA2**
 Run NSGA-II:
 
 Code
-> python MOO_NSGA2.py <br>
-
+> python MOO_NSGA2.py 
+<br><br>
 Run SPEA2:
 
 Code:
-> python MOO_SPEA2.py <br>
-
+> python MOO_SPEA2.py
+> <br><br>
 **Stage 3: NEAT +NSGA-II**
 
 Code:
-> python main.py <br>
+> python main.py
+<br><br>
 
 ## Acknowledgements
 
-- OpenAI Gymnasium and ALE-py for Ms. Pac-Man environment
-- OCAtari for wrapper on Gymnasium environment to extract objects from Atari games
-- DEAP library for evolutionary algorithm implementations
-- NEAT-Python library for neuroevolution
+- **OpenAI Gymnasium and ALE-py for Ms. Pac-Man environment**
+
+@article{towers2024gymnasium,
+  title={Gymnasium: A Standard Interface for Reinforcement Learning Environments},
+  author={Towers, Mark and Kwiatkowski, Ariel and Terry, Jordan and Balis, John U and De Cola, Gianluca and Deleu, Tristan and Goul{\~a}o, Manuel and Kallinteris, Andreas and Krimmel, Markus and KG, Arjun and others},
+  journal={arXiv preprint arXiv:2407.17032},
+  year={2024}
+}
+
+@Article{bellemare13arcade,
+  author = {{Bellemare}, M.~G. and {Naddaf}, Y. and {Veness}, J. and {Bowling}, M.},
+  title = {The Arcade Learning Environment: An Evaluation Platform for General Agents},
+  journal = {Journal of Artificial Intelligence Research},
+  year = "2013",
+  month = "jun",
+  volume = "47",
+  pages = "253--279",
+}
+  
+- **OCAtari for wrapper on Gymnasium environment** to extract object values stored in the RAM to detect the objects currently on the screen from Atari games 
+
+@article{delfosse2024ocatari,
+    title={{OCAtari}: {O}bject-Centric {Atari} 2600 Reinforcement Learning Environments},
+    author={Delfosse, Quentin and Bl{\"{u}}ml, Jannis and Gregori, Bjarne and Sztwiertnia, Sebastian and Kersting, Kristian},
+    journal={Reinforcement Learning Journal},
+    volume={1},
+    pages={400--449},
+    year={2024}
+}
+
+- **DEAP library for evolutionary algorithm implementations**
+
+@article{DEAP_JMLR2012,
+    author    = " F\'elix-Antoine Fortin and Fran\c{c}ois-Michel {De Rainville} and Marc-Andr\'e Gardner and Marc Parizeau and Christian Gagn\'e ",
+    title     = { {DEAP}: Evolutionary Algorithms Made Easy },
+    pages     = { 2171--2175 },
+    volume    = { 13 },
+    month     = { jul },
+    year      = { 2012 },
+    journal   = { Journal of Machine Learning Research }
+}
+
+- **NEAT-Python library for neuroevolution**
+
+@software{McIntyre_neat-python,
+   author = {McIntyre, Alan and Kallada, Matt and Miguel, Cesar G. and Feher de Silva, Carolina and Netto,    Marcio Lobo},
+   title = {{neat-python}}
+}
 
 
 
