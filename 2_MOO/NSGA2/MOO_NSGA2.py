@@ -338,7 +338,7 @@ def analyse_playstyle(individual):
       
     # Determine primary and secondary strategic focuses
     survival_focus = survival_time_ratio > 0.6
-    progression_focus = total_score > MAX_EXPECTED_FRAMES/2  # Half of our new baseline
+    progression_focus = total_score > MAX_EXPECTED_FRAMES/2  
     efficiency_focus = ghost_hunting_ratio > 0.3
   
     # Classify core strategy
