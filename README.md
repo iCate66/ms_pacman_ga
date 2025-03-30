@@ -110,54 +110,19 @@ Code:
 
 - **OpenAI Gymnasium and ALE-py for Ms. Pac-Man environment**
 
-@article{towers2024gymnasium,
-  title={Gymnasium: A Standard Interface for Reinforcement Learning Environments},
-  author={Towers, Mark and Kwiatkowski, Ariel and Terry, Jordan and Balis, John U and De Cola, Gianluca and Deleu, Tristan and Goul{\~a}o, Manuel and Kallinteris, Andreas and Krimmel, Markus and KG, Arjun and others},
-  journal={arXiv preprint arXiv:2407.17032},
-  year={2024}
-}
-
-@Article{bellemare13arcade,
-  author = {{Bellemare}, M.~G. and {Naddaf}, Y. and {Veness}, J. and {Bowling}, M.},
-  title = {The Arcade Learning Environment: An Evaluation Platform for General Agents},
-  journal = {Journal of Artificial Intelligence Research},
-  year = "2013",
-  month = "jun",
-  volume = "47",
-  pages = "253--279",
-}
+Bellemare, M. G., Naddaf, Y., Veness, J., Bowling, M. (2013) ‘The Arcade Learning Environment: An Evaluation Platform for General Agents’, Journal of Artificial Intelligence Research, Volume 47, pages 253-279, 2013
   
 - **OCAtari for wrapper on Gymnasium environment** to extract object values stored in the RAM to detect the objects currently on the screen from Atari games 
 
-@article{delfosse2024ocatari,
-    title={{OCAtari}: {O}bject-Centric {Atari} 2600 Reinforcement Learning Environments},
-    author={Delfosse, Quentin and Bl{\"{u}}ml, Jannis and Gregori, Bjarne and Sztwiertnia, Sebastian and Kersting, Kristian},
-    journal={Reinforcement Learning Journal},
-    volume={1},
-    pages={400--449},
-    year={2024}
-}
+Delfosse, Q., Bluml, J., Gregori, B., Sztwiertnia, S., Kersting, K. (2023) ‘OCAtari: Object-Centric Atari 2600 Reinforcement Learning Environments.’
 
 - **DEAP library for evolutionary algorithm implementations**
 
-@article{DEAP_JMLR2012,
-    author    = " F\'elix-Antoine Fortin and Fran\c{c}ois-Michel {De Rainville} and Marc-Andr\'e Gardner and Marc Parizeau and Christian Gagn\'e ",
-    title     = { {DEAP}: Evolutionary Algorithms Made Easy },
-    pages     = { 2171--2175 },
-    volume    = { 13 },
-    month     = { jul },
-    year      = { 2012 },
-    journal   = { Journal of Machine Learning Research }
-}
+Félix-Antoine Fortin, François-Michel De Rainville, Marc-André Gardner, Marc Parizeau and Christian Gagné, "DEAP: Evolutionary Algorithms Made Easy", Journal of Machine Learning Research, vol. 13, pp. 2171-2175, jul 2012
 
 - **NEAT-Python library for neuroevolution**
 
-@software{McIntyre_neat-python,
-   author = {McIntyre, Alan and Kallada, Matt and Miguel, Cesar G. and Feher de Silva, Carolina and Netto,    Marcio Lobo},
-   title = {{neat-python}}
-}
-
-
+McIntyre, A., Kallada, M., Miguel, C. G., Feher de Silva, C., & Netto, M. L. neat-python [Computer software]
 
     
     
